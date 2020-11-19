@@ -1,0 +1,29 @@
+<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+  
+  <div>
+      <%= form_with model: @post, local: true do |form|%>
+        <%= form.drag_and_drop_file_field :image%>
+        <%= form.submit %>
+      <% end %>
+ </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
