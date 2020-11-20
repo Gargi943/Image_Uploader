@@ -109,4 +109,12 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+  set :branch, "main"
+  set :deploy_to, '/home/yuva/Documents'
+
+  server '192.168.1.114',
+  user: 'yuva',
+  roles: %w{web app}
+
+
 end
