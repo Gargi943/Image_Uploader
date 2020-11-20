@@ -4,7 +4,7 @@ set :application, 'Image_Uploader'
 set :repo_url,  "git@github.com:Gargi943/Image_Uploader.git"
 set :ssh_options, { :forward_agent => true }
 
-set :scm, :git
+# set :scm, :git
 
 set :pty, true
 
