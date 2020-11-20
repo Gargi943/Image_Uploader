@@ -1,9 +1,9 @@
 # Change these
-server '192.168.1.114', port: 24, roles: [:web, :app, :db], primary: true
+server '192.168.1.114', port: 22, roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'https://github.com/Gargi943/Image_Uploader.git'
+set :repo_url,        'git@github.com:Gargi943/Image_Uploader.git'
 set :application,     'Image_Uploader'
-set :user,            'Gargi943'
+set :user,            'yuva'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
@@ -50,8 +50,8 @@ namespace :deploy do
   desc "Make sure local git is in sync with remote."
   task :check_revision do
     on roles(:app) do
-      unless `git rev-parse HEAD` == `git rev-parse origin/master`
-        puts "WARNING: HEAD is not the same as origin/master"
+      unless `git rev-parse HEAD` == `git rev-parse origin/main`
+        puts "WARNING: HEAD is not the same as origin/main"
         puts "Run `git push` to sync changes."
         exit
       end
