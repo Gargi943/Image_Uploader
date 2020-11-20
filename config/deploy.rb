@@ -1,5 +1,5 @@
 # Change these
-server '192.168.1.114/24', port: your_port_num, roles: [:web, :app, :db], primary: true
+server '192.168.1.114', port: 24, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'https://github.com/Gargi943/Image_Uploader.git'
 set :application,     'Image_Uploader'
