@@ -8,6 +8,7 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
+
 group :development do
     gem 'capistrano',         require: false
     gem 'capistrano-rvm',     require: false

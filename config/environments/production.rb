@@ -57,8 +57,3 @@
 #     keys: %w(/home/user_name/.ssh/id_rsa),
 #     forward_agent: false,
 #     auth_methods: %w(publickey password)
-set :branch, "main"
-set :deploy_to, '/home/yuva/Documents'
-server '192.168.1.114',
-  user: 'yuvasoft',
-  roles: %w{web app}
