@@ -4,7 +4,7 @@ set :application, 'Image_Uploader'
 set :repo_url,  "git@github.com:Gargi943/Image_Uploader.git"
 set :ssh_options, { :forward_agent => true }
 
-# set :scm, :git
+set :scm, :git
 
 set :pty, true
 
@@ -16,6 +16,3 @@ set :pty, true
 # set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 
 set :rails_env, 'production'
-
-
-
